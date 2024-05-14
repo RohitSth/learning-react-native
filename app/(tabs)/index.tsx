@@ -7,6 +7,7 @@ import {
   Button,
   Pressable,
   Modal,
+  StatusBar,
 } from "react-native";
 
 import { useState } from "react";
@@ -15,10 +16,20 @@ const logoImg = require("../../assets/images/adaptive-icon.png");
 
 export default function App() {
   const [modalVisible, setModalVisible] = useState(false);
+  const [showStaturBar, setShowStatusBar] = useState(false);
 
   return (
     <View style={{ flex: 1, backgroundColor: "skyblue", padding: 60 }}>
+      <StatusBar
+        backgroundColor="pink"
+        barStyle="light-content"
+        hidden={showStaturBar}
+      />
       <ScrollView>
+        <Button
+          title="StatusBar Visibility"
+          onPress={() => setShowStatusBar(!showStaturBar)}
+        />
         <Pressable
           onPressIn={() => console.log("Image Pressed In")}
           onLongPress={() => console.log("Image Hold")}
