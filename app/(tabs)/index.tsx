@@ -20,6 +20,7 @@ export default function App() {
         }
       />
 
+      {/* Custom Component */}
       <Greet name="John" />
       <Greet name="Jane" />
     </View>
