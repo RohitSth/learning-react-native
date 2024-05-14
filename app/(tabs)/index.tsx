@@ -1,4 +1,11 @@
-import { View, Text, Image, ImageBackground, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  ImageBackground,
+  ScrollView,
+  Button,
+} from "react-native";
 
 const logoImg = require("../../assets/images/adaptive-icon.png");
 
@@ -24,6 +31,12 @@ export default function App() {
           Doloribus
         </Text>
         <Image source={logoImg} style={{ width: 300, height: 300 }} />
+        <Button
+          title="Press"
+          onPress={() => console.log("Button Pressed")}
+          color="midnightblue"
+          // disabled
+        />
       </ScrollView>
     </View>
   );
