@@ -8,6 +8,7 @@ import {
   Pressable,
   Modal,
   StatusBar,
+  ActivityIndicator,
 } from "react-native";
 
 import { useState } from "react";
@@ -17,9 +18,19 @@ const logoImg = require("../../assets/images/adaptive-icon.png");
 export default function App() {
   const [modalVisible, setModalVisible] = useState(false);
   const [showStaturBar, setShowStatusBar] = useState(false);
+  const [showLoadingIndicator, setShowLoadingIndicator] = useState(false);
 
   return (
     <View style={{ flex: 1, backgroundColor: "skyblue", padding: 60 }}>
+      <ActivityIndicator />
+      <ActivityIndicator size="large" />
+      <ActivityIndicator size="large" color="midnightblue" />
+      <ActivityIndicator
+        size="large"
+        color="midnightblue"
+        animating={showLoadingIndicator}
+      />
+
       <StatusBar
         backgroundColor="pink"
         barStyle="light-content"
@@ -29,6 +40,10 @@ export default function App() {
         <Button
           title="StatusBar Visibility"
           onPress={() => setShowStatusBar(!showStaturBar)}
+        />
+        <Button
+          title="Loading Indicator Visibility"
+          onPress={() => setShowLoadingIndicator(!showLoadingIndicator)}
         />
         <Pressable
           onPressIn={() => console.log("Image Pressed In")}
