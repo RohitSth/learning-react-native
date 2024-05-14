@@ -6,11 +6,16 @@ import {
   ScrollView,
   Button,
   Pressable,
+  Modal,
 } from "react-native";
+
+import { useState } from "react";
 
 const logoImg = require("../../assets/images/adaptive-icon.png");
 
 export default function App() {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <View style={{ flex: 1, backgroundColor: "skyblue", padding: 60 }}>
       <ScrollView>
@@ -45,10 +50,27 @@ export default function App() {
         <Image source={logoImg} style={{ width: 300, height: 300 }} />
         <Button
           title="Press"
-          onPress={() => console.log("Button Pressed")}
+          onPress={() => setModalVisible(true)}
           color="midnightblue"
           // disabled
         />
+        <Modal
+          visible={modalVisible}
+          onRequestClose={() => setModalVisible(false)}
+          // animationType="fade"
+          animationType="slide"
+          // presentationStyle="formSheet" // iOS only
+          presentationStyle="pageSheet" // iOS only
+        >
+          <View style={{ flex: 1, backgroundColor: "blue", padding: 60 }}>
+            <Text>Modal Content</Text>
+            <Button
+              title="Close"
+              onPress={() => setModalVisible(false)}
+              color="midnightblue"
+            />
+          </View>
+        </Modal>
       </ScrollView>
     </View>
   );
