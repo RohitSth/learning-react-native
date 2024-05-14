@@ -1,8 +1,6 @@
 import { View, Text, Alert, Button } from "react-native";
 
-import { useState } from "react";
-
-const logoImg = require("../../assets/images/adaptive-icon.png");
+import Greet from "@/components/Greet";
 
 export default function App() {
   return (
@@ -21,7 +19,9 @@ export default function App() {
           ])
         }
       />
-      <Text>Home</Text>
+
+      <Greet name="John" />
+      <Greet name="Jane" />
     </View>
   );
 }
