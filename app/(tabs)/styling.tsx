@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 export default function Styling() {
   return (
     <View style={styles.container}>
-      <View style={[styles.box, styles.greenBg]}>
+      <View style={[styles.box, styles.greenBg, styles.boxIOSShadow]}>
         <Text
           style={{
             borderRadius: 10, // only applies in android not in ios
@@ -14,7 +14,7 @@ export default function Styling() {
           Green Box
         </Text>
       </View>
-      <View style={[styles.box, styles.grayBg]}>
+      <View style={[styles.box, styles.grayBg, styles.boxAndroidShadow]}>
         <Text>Black Box</Text>
       </View>
       {/* <Text style={styles.title}>Hello</Text> */}
@@ -30,8 +30,8 @@ const styles = StyleSheet.create({
   },
   box: {
     // box style
-    width: "25%",
-    height: "25%",
+    width: 250,
+    height: 250,
     // padding: 10,
     paddingHorizontal: 10,
     paddingVertical: 20,
@@ -52,5 +52,17 @@ const styles = StyleSheet.create({
   },
   grayBg: {
     backgroundColor: "gray",
+  },
+  boxIOSShadow: {
+    // only works in IOS for adding shadow to the box
+    shadowColor: "blue",
+    shadowOffset: { width: 10, height: 10 },
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+  },
+  boxAndroidShadow: {
+    // only works in android for adding shadow to the box
+    shadowColor: "blue", // only shadowColor works in both Android and IOS
+    elevation: 20,
   },
 });
