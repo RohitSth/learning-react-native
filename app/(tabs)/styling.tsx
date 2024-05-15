@@ -3,6 +3,13 @@ import { View, Text, StyleSheet } from "react-native";
 export default function Styling() {
   return (
     <View style={styles.container}>
+      <View style={styles.darkMode}>
+        {/* Inheritance of styles from view to text doesnot work but text to text, it works */}
+        <Text style={styles.darkModeText}>
+          Style Inheritance
+          <Text style={styles.boldText}>Bold Text</Text>
+        </Text>
+      </View>
       <View style={[styles.box, styles.greenBg, styles.boxIOSShadow]}>
         <Text
           style={{
@@ -27,6 +34,15 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "lightgreen",
     padding: 60,
+  },
+  darkMode: {
+    backgroundColor: "black",
+  },
+  darkModeText: {
+    color: "white",
+  },
+  boldText: {
+    fontWeight: "bold",
   },
   box: {
     // box style
