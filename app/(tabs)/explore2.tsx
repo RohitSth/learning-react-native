@@ -15,6 +15,8 @@ import { useState } from "react";
 
 const logoImg = require("../../assets/images/adaptive-icon.png");
 
+import AlertComponent from "@/components/AlertComponent";
+
 export default function Explore2() {
   const [modalVisible, setModalVisible] = useState(false);
   const [showStaturBar, setShowStatusBar] = useState(false);
@@ -22,6 +24,7 @@ export default function Explore2() {
 
   return (
     <View style={{ flex: 1, backgroundColor: "skyblue", padding: 60 }}>
+      <AlertComponent />
       <ActivityIndicator />
       <ActivityIndicator size="large" />
       <ActivityIndicator size="large" color="midnightblue" />

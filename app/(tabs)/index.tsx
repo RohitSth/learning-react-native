@@ -1,28 +1,25 @@
-import { View, Text, Alert, Button } from "react-native";
+import { View, StyleSheet } from "react-native";
 
-import Greet from "@/components/Greet";
+import Box from "@/components/Box";
 
 export default function App() {
   return (
-    <View style={{ flex: 1, backgroundColor: "skyblue", padding: 60 }}>
-      <Button title="Alert" onPress={() => Alert.alert("Invalid data!")} />
-      <Button
-        title="Alert2"
-        onPress={() => Alert.alert("Invalid data!", "DOB Incorrect!")}
-      />
-      <Button
-        title="Alert3"
-        onPress={() =>
-          Alert.alert("Invalid data!", "DOB Incorrect!", [
-            { text: "Cancel", onPress: () => console.log("Cancel Pressed") },
-            { text: "OK", onPress: () => console.log("OK Pressed") },
-          ])
-        }
-      />
-
-      {/* Custom Component */}
-      <Greet name="John" />
-      <Greet name="Jane" />
+    <View style={styles.container}>
+      <Box style={{ backgroundColor: "#1c4c56" }}>Box 1</Box>
+      <Box style={{ backgroundColor: "#7c4c56" }}>Box 2</Box>
+      <Box style={{ backgroundColor: "#9c4c56" }}>Box 3</Box>
+      <Box style={{ backgroundColor: "#7c4c56" }}>Box 4</Box>
+      <Box style={{ backgroundColor: "#4c2c56" }}>Box 5</Box>
+      <Box style={{ backgroundColor: "#1c8856" }}>Box 6</Box>
+      <Box style={{ backgroundColor: "#1c9056" }}>Box 7</Box>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    marginTop: 64,
+    borderWidth: 6,
+    borderColor: "red",
+  },
+});
