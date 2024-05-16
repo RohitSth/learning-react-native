@@ -10,10 +10,10 @@ export default function App() {
       <Box style={{ backgroundColor: "#1c4c56", flex: 1 }}>Box 1</Box>
       <Box style={{ backgroundColor: "#7c4c56", flex: 3 }}>Box 2</Box>
       <Box style={{ backgroundColor: "#9c4c56" }}>Box 3</Box>
-      <Box style={{ backgroundColor: "#7c4c56" }}>Box 4</Box>
+      {/* <Box style={{ backgroundColor: "#7c4c56" }}>Box 4</Box>
       <Box style={{ backgroundColor: "#4c2c56" }}>Box 5</Box>
       <Box style={{ backgroundColor: "#1c8856" }}>Box 6</Box>
-      <Box style={{ backgroundColor: "#1c9056" }}>Box 7</Box>
+      <Box style={{ backgroundColor: "#1c9056" }}>Box 7</Box> */}
     </View>
   );
 }
@@ -24,5 +24,6 @@ const styles = StyleSheet.create({
     borderWidth: 6,
     borderColor: "red",
     flex: 1,
+    flexDirection: "row-reverse",
   },
 });
