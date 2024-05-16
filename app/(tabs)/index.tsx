@@ -29,8 +29,14 @@ const styles = StyleSheet.create({
     borderColor: "red",
     // flex: 1,
     height: 300,
+    gap: 10,
+    // rowGap: 10,
+    // columnGap: 10,
+
     // flexDirection: "row", // default-column, row, row-reverse
+
     flexWrap: "wrap", // default-nowrap, wrap, wrap-reverse
-    alignContent: "space-around", // default-stretch, flex-start, flex-end, center, space-between, space-around
+
+    // alignContent: "space-around", // default-stretch, flex-start, flex-end, center, space-between, space-around
   },
 });
