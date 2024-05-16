@@ -26,6 +26,9 @@ const styles = StyleSheet.create({
     flex: 1,
     // flexDirection: "row-reverse",
     // flex-start, flex-end, space-between, space-around, space-evenly
-    justifyContent: "space-evenly",
+    justifyContent: "space-evenly", // main axis
+
+    // flex-start, flex-end, center, stretch
+    alignItems: "center", // cross axis
   },
 });
