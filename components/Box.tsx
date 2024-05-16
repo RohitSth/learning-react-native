@@ -17,12 +17,12 @@ const styles = StyleSheet.create({
   box: {
     backgroundColor: "skyblue",
     padding: 20,
-    width: 70,
-    height: 70,
+    // width: 70,
+    // height: 70,
   },
   text: {
     color: "white",
-    fontSize: 12,
+    fontSize: 20,
     fontWeight: "bold",
     textAlign: "center",
   },
