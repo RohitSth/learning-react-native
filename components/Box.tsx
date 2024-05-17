@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     padding: 20,
     // width: 70,
     // height: 70,
+    flexGrow: 1,
   },
   text: {
     color: "white",
