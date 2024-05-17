@@ -8,21 +8,24 @@ export default function App() {
       <Box
         style={{
           backgroundColor: "#1c4c56",
+          flexShrink: 1,
         }}
       >
-        Box 1
+        Box 1 Shrink
       </Box>
-      <Box style={{ backgroundColor: "#7c4c56" }}>Box 2</Box>
-      <Box style={{ backgroundColor: "#9c4c56" }}>Box 3</Box>
+      <Box style={{ backgroundColor: "#7c4c56", flexShrink: 3 }}>
+        Box 2 Shrink
+      </Box>
+      {/* <Box style={{ backgroundColor: "#9c4c56" }}>Box 3</Box> */}
       {/* Flex basis is used to set the initial size of the flex item */}
-      <Box style={{ backgroundColor: "#7c4c56", flexBasis: 200, flex: 1 }}>
+      {/* <Box style={{ backgroundColor: "#7c4c56", flexBasis: 200, flex: 1 }}>
         Box 4
       </Box>
       <Box style={{ backgroundColor: "#4c2c56", height: 200, flex: 1 }}>
         Box 5
       </Box>
       <Box style={{ backgroundColor: "#1c8856" }}>Box 6</Box>
-      <Box style={{ backgroundColor: "#1c9056" }}>Box 7</Box>
+      <Box style={{ backgroundColor: "#1c9056" }}>Box 7</Box> */}
     </View>
   );
 }
@@ -37,8 +40,10 @@ const styles = StyleSheet.create({
     // gap: 10,
     // rowGap: 10,
     // columnGap: 10,
+    width: 300,
 
-    // flexDirection: "row", // default-column, row, row-reverse
+    flexDirection: "row", // default-column, row, row-reverse
+    alignItems: "flex-start",
 
     // flexWrap: "wrap", // default-nowrap, wrap, wrap-reverse
 
