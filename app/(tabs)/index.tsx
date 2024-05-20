@@ -9,12 +9,23 @@ export default function App() {
         style={{
           backgroundColor: "#1c4c56",
           // flexShrink: 1,
+          top: 75,
+          left: 75,
         }}
       >
         Box 1
       </Box>
-      <Box style={{ backgroundColor: "#7c4c56" }}>Box 2 Shrink</Box>
-      <Box style={{ backgroundColor: "#9c4c56" }}>Box 3</Box>
+      <Box style={{ backgroundColor: "#7c4c56" }}>Box 2</Box>
+      <Box
+        style={{
+          backgroundColor: "#9c4c56",
+          position: "absolute",
+          top: 125,
+          left: 125,
+        }}
+      >
+        Box 3
+      </Box>
       {/* Flex basis is used to set the initial size of the flex item */}
       {/* <Box style={{ backgroundColor: "#7c4c56", flexBasis: 200, flex: 1 }}>
         Box 4
