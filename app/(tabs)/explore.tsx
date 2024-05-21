@@ -4,6 +4,8 @@ const logoImg = require("../../assets/images/adaptive-icon.png");
 
 import Box from "@/components/Box";
 
+import BoxView from "@/components/BoxView";
+
 export default function Page2() {
   return (
     <View style={{ flex: 1, backgroundColor: "skyblue", padding: 60 }}>
@@ -43,6 +45,7 @@ export default function Page2() {
           <Box style={{ backgroundColor: "#1c9056" }}>Box 7</Box>
         </View>
       </ImageBackground>
+      <BoxView />
     </View>
   );
 }
