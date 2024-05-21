@@ -1,4 +1,10 @@
-import { View, Text, StyleSheet, SafeAreaView } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView, Platform } from "react-native";
+
+import CustomButtonAndroid from "@/components/CustomButton/CustomButtonAndroid.android";
+import CustomButtonIOS from "@/components/CustomButton/CustomButtonIOS.ios";
+
+const CustomButton =
+  Platform.OS === "ios" ? CustomButtonIOS : CustomButtonAndroid;
 
 export default function App() {
   return (
@@ -6,6 +12,10 @@ export default function App() {
       <View style={styles.container}>
         <View style={styles.box}>
           <Text style={styles.text}>Welcome</Text>
+          <CustomButton
+            title="Press me"
+            onPress={() => alert("Button pressed")}
+          />
         </View>
       </View>
     </SafeAreaView>
@@ -20,13 +30,23 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "lightblue",
+    paddingTop: Platform.OS === "android" ? 25 : 0,
   },
   box: {
     padding: 20,
   },
   text: {
-    color: "white",
-    fontSize: 24,
+    ...Platform.select({
+      ios: {
+        color: "blue",
+        fontSize: 24,
+        fontStyle: "italic",
+      },
+      android: {
+        color: "purple",
+        fontSize: 30,
+      },
+    }),
     fontWeight: "bold",
     textAlign: "center",
   },
